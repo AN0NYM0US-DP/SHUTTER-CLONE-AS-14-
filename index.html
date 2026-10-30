@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shutter Clone</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .page {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        .gallery {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            gap: 24px;
+        }
+
+        .top-row {
+            height: 52vh;
+        }
+
+        .top-row .image-one {
+            width: 66%;
+        }
+
+        .top-row .image-two {
+            width: 34%;
+        }
+
+        .bottom-row {
+            height: 48vh;
+        }
+
+        .bottom-row .image-three {
+            width: 25%;
+        }
+
+        .bottom-row .image-four {
+            width: 50%;
+        }
+
+        .bottom-row .image-five {
+            width: 25%;
+        }
+
+        .photo {
+            overflow: hidden;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+        .photo:hover img {
+            transform: scale(1.06);
+        }
+
+        .sidebar {
+            width: 20%;
+            min-height: 100vh;
+
+            background-color: #000;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding-top: 38px;
+        }
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 35px;
+        }
+
+        .navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+
+            transition: color 0.3s ease;
+        }
+
+        .navigation a:first-child {
+            color: red;
+        }
+
+        .navigation a:hover {
+            color: red;
+        }
+
+        .social {
+            margin-top: 50px;
+
+            display: flex;
+            gap: 22px;
+        }
+
+        .social a {
+            color: white;
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            color: red;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 900px) {
+
+            .page {
+                flex-direction: column;
+            }
+
+            .gallery {
+                width: 100%;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+
+                padding: 35px 20px;
+                order: -1;
+            }
+
+            .navigation {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .social {
+                margin-top: 30px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .gallery {
+                gap: 10px;
+            }
+
+            .row {
+                flex-direction: column;
+                gap: 10px;
+                height: auto;
+            }
+
+            .top-row .image-one,
+            .top-row .image-two,
+            .bottom-row .image-three,
+            .bottom-row .image-four,
+            .bottom-row .image-five {
+                width: 100%;
+                height: 300px;
+            }
+
+            .sidebar {
+                padding: 25px 15px;
+            }
+
+            .logo {
+                margin-bottom: 25px;
+            }
+
+            .navigation {
+                gap: 15px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <main class="gallery">
+
+            <div class="row top-row">
+
+                <div class="photo image-one">
+                    <img src="img_1" alt="Surfing photograph">
+                </div>
+
+                <div class="photo image-two">
+                    <img src="img_2" alt="Mountain photograph">
+                </div>
+
+            </div>
+
+            <div class="row bottom-row">
+
+                <div class="photo image-three">
+                    <img src="img_3" alt="Portrait photograph">
+                </div>
+
+                <div class="photo image-four">
+                    <img src="img_4" alt="Tree photograph">
+                </div>
+
+                <div class="photo image-five">
+                    <img src="img_5" alt="Friends photograph">
+                </div>
+
+            </div>
+
+        </main>
+        <aside class="sidebar">
+
+            <a href="#" class="logo">
+                SHUTTER
+            </a>
+
+
+            <nav class="navigation">
+
+                <a href="#">HOME</a>
+
+                <a href="#">PHOTOS</a>
+
+                <a href="#">BIO</a>
+
+                <a href="#">BLOG</a>
+
+                <a href="#">CONTACT</a>
+
+            </nav>
+
+
+            <div class="social">
+
+                <a href="#">f</a>
+
+                <a href="#">𝕏</a>
+
+                <a href="#">◎</a>
+
+                <a href="#">▶</a>
+
+                <a href="#">▣</a>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</body>
+</html>
